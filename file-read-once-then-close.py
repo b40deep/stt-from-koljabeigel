@@ -7,21 +7,12 @@ pcm_file = None
 
 
 CHUNK_BYTES = 3200
-from RealtimeSTT import AudioToTextRecorder
-
 
 if __name__ == "__main__":
-    recorder = AudioToTextRecorder(use_microphone=False)
+    recorder = AudioToTextRecorder(use_microphone=False,)
 
-    with open("audio_stream.pcm", "rb") as audio_file:
-        while True:
-            chunk = audio_file.read(CHUNK_BYTES)
-            if not chunk:
-                break
-            recorder.feed_audio(chunk, original_sample_rate=16000)
-
-    print(recorder.text())
-    recorder.shutdown()
+    with open("audio_chunk.pcm", "rb") as audio_file:
+        recorder.feed_audio(audio_file.read(), original_sample_rate=16000)
 
     print(recorder.text())
     recorder.shutdown()

@@ -3,6 +3,7 @@
 ## specific flavour / edits:
 - I want it to run on CPU only - and as fast as possible.
 - So I've set it up for `sherpa_onnx_parakeet` rather than its default `faster-whisper`.
+- It works well with the laptop's mic, but I've failed to make it work with pre-recorded audio.
 - I tried to upload the model files too, but they're too big. I'll leave setup instructions instead. They'll end up in `test-model-cache`.
 - I've used parakeet and all the recipes work. I've not tried moonshine so this repo isn't guaranteed to work for it.
 - Next, I want to hook it up to a gradio UI for a quick webapp to view the transcription as it happens.
