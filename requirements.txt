@@ -1,0 +1,9 @@
+RealtimeSTT[sherpa_onnx_parakeet]
+sherpa-onnx
+
+# error on first run.
+silero-vad[onnx-cpu]>=6.2.1; python_version >= "3.8"
+
+# for moonshine
+# transformers
+# torch

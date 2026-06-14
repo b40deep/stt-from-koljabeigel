@@ -1,0 +1,1324 @@
+2026-06-14 13:14:22.676 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:14:22.686 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:14:22.693 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:14:22.693 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:14:22.694 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx_ifless unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 225, in _create_raw_onnx_vad
+    raise SileroVadError(
+RealtimeSTT.core.silero_vad.SileroVadError: Could not find silero_vad_op18_ifless.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.
+2026-06-14 13:14:22.696 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 225, in _create_raw_onnx_vad
+    raise SileroVadError(
+RealtimeSTT.core.silero_vad.SileroVadError: Could not find silero_vad.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.
+2026-06-14 13:16:17.462 - RealTimeSTT: realtimestt - ERROR - Error initializing Silero VAD voice activity detection engine: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: Could not find silero_vad_op18_ifless.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.; raw_onnx: Could not find silero_vad.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.; pytorch_cpu: No module named 'packaging'
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 287, in _create_pytorch_vad
+    loaded = _load_silero_package_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 303, in _load_silero_package_model
+    module = import_module("silero_vad")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'silero_vad'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 195, in _create_auto_vad
+    return _create_pytorch_vad("cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 289, in _create_pytorch_vad
+    loaded = _load_torch_hub_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 319, in _load_torch_hub_model
+    loaded = torch.hub.load(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 669, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 699, in _load_local
+    hub_module = _import_module(MODULE_HUBCONF, hubconf_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 118, in _import_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\hubconf.py", line 6, in <module>
+    from silero_vad.utils_vad import (init_jit_model,
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\__init__.py", line 7, in <module>
+    from silero_vad.model import load_silero_vad
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\model.py", line 1, in <module>
+    from .utils_vad import init_jit_model, OnnxWrapper
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\utils_vad.py", line 5, in <module>
+    from packaging import version
+ModuleNotFoundError: No module named 'packaging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\initialization.py", line 558, in _initialize_voice_activity_detection
+    recorder.silero_vad_model = create_silero_vad_model(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 114, in create_silero_vad_model
+    return _create_auto_vad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 198, in _create_auto_vad
+    raise SileroVadError(
+RealtimeSTT.core.silero_vad.SileroVadError: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: Could not find silero_vad_op18_ifless.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.; raw_onnx: Could not find silero_vad.onnx in the installed silero_vad package or the local torch hub cache. Install 'silero-vad' or pass silero_onnx_model_path.; pytorch_cpu: No module named 'packaging'
+2026-06-14 13:19:25.524 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:19:25.533 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:19:25.540 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:19:25.540 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:19:25.545 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx_ifless unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 230, in _create_raw_onnx_vad
+    return RawSileroOnnxVad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 443, in __init__
+    ort = import_module("onnxruntime")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'onnxruntime'
+2026-06-14 13:19:25.552 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 230, in _create_raw_onnx_vad
+    return RawSileroOnnxVad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 443, in __init__
+    ort = import_module("onnxruntime")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'onnxruntime'
+2026-06-14 13:19:26.028 - RealTimeSTT: realtimestt - ERROR - Error initializing Silero VAD voice activity detection engine: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: No module named 'onnxruntime'; raw_onnx: No module named 'onnxruntime'; pytorch_cpu: No module named 'packaging'
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 287, in _create_pytorch_vad
+    loaded = _load_silero_package_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 303, in _load_silero_package_model
+    module = import_module("silero_vad")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'silero_vad'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 195, in _create_auto_vad
+    return _create_pytorch_vad("cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 289, in _create_pytorch_vad
+    loaded = _load_torch_hub_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 319, in _load_torch_hub_model
+    loaded = torch.hub.load(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 669, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 699, in _load_local
+    hub_module = _import_module(MODULE_HUBCONF, hubconf_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 118, in _import_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\hubconf.py", line 6, in <module>
+    from silero_vad.utils_vad import (init_jit_model,
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\__init__.py", line 7, in <module>
+    from silero_vad.model import load_silero_vad
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\model.py", line 1, in <module>
+    from .utils_vad import init_jit_model, OnnxWrapper
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\utils_vad.py", line 5, in <module>
+    from packaging import version
+ModuleNotFoundError: No module named 'packaging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\initialization.py", line 558, in _initialize_voice_activity_detection
+    recorder.silero_vad_model = create_silero_vad_model(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 114, in create_silero_vad_model
+    return _create_auto_vad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 198, in _create_auto_vad
+    raise SileroVadError(
+RealtimeSTT.core.silero_vad.SileroVadError: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: No module named 'onnxruntime'; raw_onnx: No module named 'onnxruntime'; pytorch_cpu: No module named 'packaging'
+2026-06-14 13:29:33.483 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:29:33.490 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:29:33.494 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:29:33.495 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:29:33.508 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx_ifless unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 230, in _create_raw_onnx_vad
+    return RawSileroOnnxVad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 443, in __init__
+    ort = import_module("onnxruntime")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'onnxruntime'
+2026-06-14 13:29:33.512 - RealTimeSTT: realtimestt - DEBUG - Silero VAD auto backend raw_onnx unavailable
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 176, in _create_auto_vad
+    return _create_raw_onnx_vad(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 230, in _create_raw_onnx_vad
+    return RawSileroOnnxVad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 443, in __init__
+    ort = import_module("onnxruntime")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'onnxruntime'
+2026-06-14 13:29:33.970 - RealTimeSTT: realtimestt - ERROR - Error initializing Silero VAD voice activity detection engine: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: No module named 'onnxruntime'; raw_onnx: No module named 'onnxruntime'; pytorch_cpu: No module named 'packaging'
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 287, in _create_pytorch_vad
+    loaded = _load_silero_package_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 303, in _load_silero_package_model
+    module = import_module("silero_vad")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nombre\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'silero_vad'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 195, in _create_auto_vad
+    return _create_pytorch_vad("cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 289, in _create_pytorch_vad
+    loaded = _load_torch_hub_model(onnx=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 319, in _load_torch_hub_model
+    loaded = torch.hub.load(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 669, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 699, in _load_local
+    hub_module = _import_module(MODULE_HUBCONF, hubconf_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\torch\hub.py", line 118, in _import_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\hubconf.py", line 6, in <module>
+    from silero_vad.utils_vad import (init_jit_model,
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\__init__.py", line 7, in <module>
+    from silero_vad.model import load_silero_vad
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\model.py", line 1, in <module>
+    from .utils_vad import init_jit_model, OnnxWrapper
+  File "C:\Users\nombre/.cache\torch\hub\snakers4_silero-vad_master\src\silero_vad\utils_vad.py", line 5, in <module>
+    from packaging import version
+ModuleNotFoundError: No module named 'packaging'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\initialization.py", line 558, in _initialize_voice_activity_detection
+    recorder.silero_vad_model = create_silero_vad_model(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 114, in create_silero_vad_model
+    return _create_auto_vad(
+           ^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\silero_vad.py", line 198, in _create_auto_vad
+    raise SileroVadError(
+RealtimeSTT.core.silero_vad.SileroVadError: Could not initialize any automatic Silero VAD backend. Tried: raw_onnx_ifless: No module named 'onnxruntime'; raw_onnx: No module named 'onnxruntime'; pytorch_cpu: No module named 'packaging'
+2026-06-14 13:33:49.901 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:33:49.913 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:33:49.919 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:33:49.919 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:33:50.193 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 13:33:50.197 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 13:33:50.198 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 13:33:50.198 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 13:34:01.382 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 13:34:01.400 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 13:34:01.400 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:34:01.400 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:34:01.420 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:34:05.762 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:34:05.762 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:34:05.762 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:34:05.763 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:34:18.562 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:34:18.568 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 221184
+2026-06-14 13:34:18.568 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:34:18.584 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:34:18.586 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:34:18.595 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:18.700 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:18.811 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:18.921 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.032 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.141 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.249 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.359 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.470 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.577 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.687 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.796 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:19.906 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.017 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.125 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.232 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.341 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.451 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.559 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.667 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.777 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:20.818 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:34:20.875 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 2.29 seconds
+2026-06-14 13:34:20.876 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:34:20.876 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:34:20.879 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:34:29.498 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:34:29.498 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:34:29.498 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:34:29.499 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:34:34.561 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:34:34.563 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 96768
+2026-06-14 13:34:34.564 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:34:34.643 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:34:34.645 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:34:34.646 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:34.760 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:34.869 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:34.978 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:35.088 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:35.162 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:34:35.208 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.56 seconds
+2026-06-14 13:34:35.209 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:34:35.209 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:34:35.210 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:34:43.961 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:34:43.961 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:34:43.961 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:34:43.961 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:34:47.547 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:34:47.549 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 73728
+2026-06-14 13:34:47.549 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:34:47.557 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:34:47.560 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:34:47.577 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:47.683 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:47.793 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:47.903 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:48.013 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:48.020 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:34:48.021 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.46 seconds
+2026-06-14 13:34:48.022 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:34:48.022 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:34:48.023 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:34:55.867 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:34:55.867 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:34:55.867 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:34:55.867 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:34:59.258 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:34:59.260 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 70656
+2026-06-14 13:34:59.260 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:34:59.307 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:34:59.309 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:34:59.310 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:59.413 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:59.525 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:59.634 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:34:59.689 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:34:59.718 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.41 seconds
+2026-06-14 13:34:59.719 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:34:59.719 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:34:59.720 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:35:03.226 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:35:03.226 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:35:03.226 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:35:03.226 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:35:06.560 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:35:06.561 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 69632
+2026-06-14 13:35:06.561 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:35:06.587 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:35:06.589 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:35:06.599 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:06.702 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:06.809 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:06.919 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:06.984 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:35:06.999 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.41 seconds
+2026-06-14 13:35:06.999 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:35:06.999 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:35:07.001 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:35:14.107 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:35:14.107 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:35:14.107 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:35:14.108 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:35:18.779 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:35:18.781 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 91136
+2026-06-14 13:35:18.781 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:35:18.846 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:35:18.848 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:35:18.850 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:18.955 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:19.065 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:19.174 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:19.282 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:19.339 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:35:19.361 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.51 seconds
+2026-06-14 13:35:19.361 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:35:19.361 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:35:19.363 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:35:33.560 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:35:33.560 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:35:33.560 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:35:33.560 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:35:37.402 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:35:37.404 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 77824
+2026-06-14 13:35:37.404 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:35:37.435 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:35:37.437 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:35:37.438 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:37.550 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:37.660 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:37.769 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:37.878 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:35:37.879 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:35:37.897 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.46 seconds
+2026-06-14 13:35:37.898 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:35:37.898 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:35:37.900 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:35:41.982 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 13:35:41.982 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 13:35:41.997 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 13:35:42.525 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 13:35:42.797 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 13:35:42.868 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
+2026-06-14 13:37:47.790 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:37:47.797 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:37:47.801 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:37:47.801 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:37:47.885 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 13:37:47.887 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 13:37:47.887 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 13:37:47.887 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 13:38:42.880 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:38:42.886 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:38:42.891 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:38:42.891 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:38:42.960 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 13:38:42.962 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 13:38:42.962 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 13:38:42.962 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 13:38:49.495 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 13:38:49.504 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 13:38:49.505 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:38:49.505 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:38:49.508 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:38:53.114 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:38:53.114 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:38:53.114 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:38:53.115 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:39:00.221 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:39:00.225 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 130048
+2026-06-14 13:39:00.225 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:39:00.268 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:39:00.271 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:39:00.294 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.400 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.509 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.619 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.730 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.841 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:00.951 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.062 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.170 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.280 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.389 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.500 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:01.563 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:39:01.601 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 1.33 seconds
+2026-06-14 13:39:01.602 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 13:39:01.611 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 13:39:01.673 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 13:39:01.673 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 13:39:02.215 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 13:39:02.324 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 13:39:10.641 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:39:10.649 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:39:10.653 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:39:10.654 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:39:10.731 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 13:39:10.733 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 13:39:10.734 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 13:39:10.734 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 13:39:17.275 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 13:39:17.279 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 13:39:17.279 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:39:17.280 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:39:17.284 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:39:19.666 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:39:19.666 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:39:19.666 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:39:19.666 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:39:22.866 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:39:22.869 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 67584
+2026-06-14 13:39:22.869 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:39:22.931 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:39:22.934 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:39:22.935 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.045 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.156 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.265 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.375 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.484 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:39:23.585 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:39:23.600 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.67 seconds
+2026-06-14 13:39:23.601 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 13:39:23.610 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 13:39:24.193 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 13:39:24.307 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 13:44:05.079 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:44:05.087 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:44:05.092 - RealTimeSTT: realtimestt - INFO - Initializing sherpa_onnx_parakeet realtime transcription model tiny.en, default device: cpu, compute type: default, device index: 0, download root: None
+2026-06-14 13:44:05.112 - RealTimeSTT: realtimestt - ERROR - Error initializing sherpa_onnx_parakeet realtime transcription model: Missing sherpa-onnx encoder file for sherpa_onnx_parakeet: tiny.en\encoder.int8.onnx. Download and extract https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2, then pass the extracted directory as model or engine_options['model_dir'].
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\initialization.py", line 466, in _initialize_realtime_transcription_model
+    recorder.realtime_transcription_model = create_transcription_engine(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\factory.py", line 61, in create_transcription_engine
+    return engine_cls(config)
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 346, in __init__
+    self.backend = backend or (backend_cls or SherpaOnnxParakeetBackend)(config)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 141, in __init__
+    self.recognizer = self._create_recognizer(recognizer_cls)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 263, in _create_recognizer
+    "encoder": self._file("encoder", "encoder.int8.onnx"),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 179, in _file
+    raise TranscriptionEngineError(
+RealtimeSTT.transcription_engines.base.TranscriptionEngineError: Missing sherpa-onnx encoder file for sherpa_onnx_parakeet: tiny.en\encoder.int8.onnx. Download and extract https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2, then pass the extracted directory as model or engine_options['model_dir'].
+2026-06-14 13:44:27.289 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:44:27.297 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:44:27.301 - RealTimeSTT: realtimestt - INFO - Initializing sherpa_onnx_parakeet realtime transcription model tiny, default device: cpu, compute type: default, device index: 0, download root: None
+2026-06-14 13:44:27.323 - RealTimeSTT: realtimestt - ERROR - Error initializing sherpa_onnx_parakeet realtime transcription model: Missing sherpa-onnx encoder file for sherpa_onnx_parakeet: tiny\encoder.int8.onnx. Download and extract https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2, then pass the extracted directory as model or engine_options['model_dir'].
+Traceback (most recent call last):
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\core\initialization.py", line 466, in _initialize_realtime_transcription_model
+    recorder.realtime_transcription_model = create_transcription_engine(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\factory.py", line 61, in create_transcription_engine
+    return engine_cls(config)
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 346, in __init__
+    self.backend = backend or (backend_cls or SherpaOnnxParakeetBackend)(config)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 141, in __init__
+    self.recognizer = self._create_recognizer(recognizer_cls)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 263, in _create_recognizer
+    "encoder": self._file("encoder", "encoder.int8.onnx"),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nombre\Desktop\repos\_temp_stt\venv\Lib\site-packages\RealtimeSTT\transcription_engines\sherpa_onnx_engine.py", line 179, in _file
+    raise TranscriptionEngineError(
+RealtimeSTT.transcription_engines.base.TranscriptionEngineError: Missing sherpa-onnx encoder file for sherpa_onnx_parakeet: tiny\encoder.int8.onnx. Download and extract https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2, then pass the extracted directory as model or engine_options['model_dir'].
+2026-06-14 13:45:51.970 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 13:45:51.978 - RealTimeSTT: realtimestt - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2026-06-14 13:45:51.983 - RealTimeSTT: realtimestt - INFO - Initializing sherpa_onnx_parakeet realtime transcription model tiny, default device: cpu, compute type: default, device index: 0, download root: None
+2026-06-14 13:45:54.726 - RealTimeSTT: realtimestt - DEBUG - sherpa_onnx_parakeet realtime speech to text transcription model initialized successfully
+2026-06-14 13:45:54.726 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 13:45:54.726 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 13:45:54.820 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 13:45:54.822 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 13:45:54.822 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 13:45:59.120 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 13:45:59.123 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 13:45:59.123 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:45:59.123 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:45:59.126 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:04.923 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:04.924 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:04.924 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:04.924 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:05.113 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:46:05.297 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet.
+2026-06-14 13:46:05.314 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:46:05.513 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet.
+2026-06-14 13:46:05.515 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:05.731 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet then.
+2026-06-14 13:46:05.732 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:05.961 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name
+2026-06-14 13:46:05.962 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 33280
+2026-06-14 13:46:06.244 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): I'll sweet the name.
+2026-06-14 13:46:06.246 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 37376
+2026-06-14 13:46:06.585 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name
+2026-06-14 13:46:06.589 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 42496
+2026-06-14 13:46:06.914 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of
+2026-06-14 13:46:06.915 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 48640
+2026-06-14 13:46:07.302 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus
+2026-06-14 13:46:07.304 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 54784
+2026-06-14 13:46:07.741 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus Son.
+2026-06-14 13:46:07.745 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 60928
+2026-06-14 13:46:08.200 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus Sons
+2026-06-14 13:46:08.709 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 77312
+2026-06-14 13:46:09.266 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus sons.
+2026-06-14 13:46:09.268 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 85504
+2026-06-14 13:46:09.963 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus sons inability
+2026-06-14 13:46:09.964 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 96768
+2026-06-14 13:46:10.674 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus sons in a believers
+2026-06-14 13:46:10.675 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 108032
+2026-06-14 13:46:11.487 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): How sweet the name of Jesus sounds in a believer's ear.
+2026-06-14 13:46:11.589 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:11.596 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 122880
+2026-06-14 13:46:11.596 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:11.634 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:11.636 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:11.651 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:11.756 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:11.866 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:11.976 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:12.086 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:12.196 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:12.304 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:12.414 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:12.510 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:46:12.567 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.93 seconds
+2026-06-14 13:46:12.567 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:12.567 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:46:12.569 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:18.554 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:18.554 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:18.554 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:18.554 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:18.748 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:46:18.891 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's
+2026-06-14 13:46:18.949 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:46:19.100 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's so.
+2026-06-14 13:46:19.150 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:19.370 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's so good.
+2026-06-14 13:46:19.371 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:19.569 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It so.
+2026-06-14 13:46:19.572 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:46:19.792 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It soes.
+2026-06-14 13:46:19.793 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:46:20.060 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It soothes his own.
+2026-06-14 13:46:20.061 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:46:20.364 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:20.364 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 45568
+2026-06-14 13:46:20.631 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It sootes his sorrow.
+2026-06-14 13:46:20.632 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 49664
+2026-06-14 13:46:20.960 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It soothes his sorrow.
+2026-06-14 13:46:20.961 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 54784
+2026-06-14 13:46:21.344 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It soothes his sorrows.
+2026-06-14 13:46:21.826 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:21.830 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 68608
+2026-06-14 13:46:21.830 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:21.852 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:21.854 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:21.855 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:21.947 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:21.947 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:21.947 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'recording'
+2026-06-14 13:46:21.955 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:22.063 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:22.134 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 5120
+2026-06-14 13:46:22.177 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:22.254 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Um
+2026-06-14 13:46:22.288 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:22.336 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 9216
+2026-06-14 13:46:22.380 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.53 seconds
+2026-06-14 13:46:22.410 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:22.410 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:22.464 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:46:22.537 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 12288
+2026-06-14 13:46:22.650 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:46:22.738 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 15360
+2026-06-14 13:46:22.837 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And ten.
+2026-06-14 13:46:22.939 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18432
+2026-06-14 13:46:23.092 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And ten.
+2026-06-14 13:46:23.140 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 21504
+2026-06-14 13:46:23.305 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And ten.
+2026-06-14 13:46:23.341 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 24576
+2026-06-14 13:46:23.529 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tense.
+2026-06-14 13:46:23.542 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 27648
+2026-06-14 13:46:23.737 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his
+2026-06-14 13:46:23.742 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 30720
+2026-06-14 13:46:23.925 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wound.
+2026-06-14 13:46:23.944 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 34816
+2026-06-14 13:46:24.191 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): and tends his wound
+2026-06-14 13:46:24.191 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 38912
+2026-06-14 13:46:24.437 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wounds
+2026-06-14 13:46:24.438 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 41984
+2026-06-14 13:46:24.752 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wounds.
+2026-06-14 13:46:24.956 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 51200
+2026-06-14 13:46:25.260 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wounds.
+2026-06-14 13:46:25.261 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 55296
+2026-06-14 13:46:25.604 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wounds and
+2026-06-14 13:46:25.605 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 61440
+2026-06-14 13:46:26.023 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tense his wounds and drives.
+2026-06-14 13:46:26.024 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 67584
+2026-06-14 13:46:26.433 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And tends his wounds and drives up.
+2026-06-14 13:46:26.434 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 74752
+2026-06-14 13:46:26.922 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): and tends his wounds and drives away
+2026-06-14 13:46:26.923 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 81920
+2026-06-14 13:46:27.408 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): and tends his wounds and drives away his fear.
+2026-06-14 13:46:27.410 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 90112
+2026-06-14 13:46:27.989 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): and tends his wounds and drives away his fears.
+2026-06-14 13:46:28.412 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:28.415 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 105984
+2026-06-14 13:46:28.415 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:28.468 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:28.471 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:28.472 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:28.572 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:28.682 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:28.788 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:28.898 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:29.008 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:29.103 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:46:29.170 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.70 seconds
+2026-06-14 13:46:29.170 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:29.171 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:46:29.173 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:32.828 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:32.828 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:32.828 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:32.829 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:33.020 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:46:33.142 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Okay.
+2026-06-14 13:46:33.220 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:46:33.375 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's a good thing.
+2026-06-14 13:46:33.421 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:33.618 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It.
+2026-06-14 13:46:33.622 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:33.855 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It
+2026-06-14 13:46:33.913 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 34304
+2026-06-14 13:46:34.105 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): en
+2026-06-14 13:46:34.113 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 37376
+2026-06-14 13:46:34.344 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's a very good
+2026-06-14 13:46:34.345 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:46:34.611 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It's not.
+2026-06-14 13:46:34.612 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44544
+2026-06-14 13:46:34.946 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:34.946 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 49664
+2026-06-14 13:46:35.241 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded
+2026-06-14 13:46:35.242 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 54784
+2026-06-14 13:46:35.603 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded.
+2026-06-14 13:46:35.604 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 60928
+2026-06-14 13:46:36.002 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded spirit.
+2026-06-14 13:46:36.003 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 67072
+2026-06-14 13:46:36.397 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded spirit.
+2026-06-14 13:46:36.734 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 79360
+2026-06-14 13:46:37.201 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded spirit.
+2026-06-14 13:46:37.202 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 86528
+2026-06-14 13:46:37.726 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded spirit all.
+2026-06-14 13:46:37.727 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 94720
+2026-06-14 13:46:38.317 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): It makes the wounded spirit all.
+2026-06-14 13:46:38.391 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:38.393 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 105472
+2026-06-14 13:46:38.394 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:38.406 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:38.408 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:38.408 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:38.511 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:38.623 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:38.735 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:38.844 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:38.954 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:39.056 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:46:39.073 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.66 seconds
+2026-06-14 13:46:39.074 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:39.074 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:46:39.076 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:41.602 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:41.602 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:41.602 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:41.602 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:41.800 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 19968
+2026-06-14 13:46:41.935 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:42.001 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:46:42.139 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And come on.
+2026-06-14 13:46:42.201 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:42.373 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:42.402 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:42.607 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:42.607 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:46:42.849 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:42.850 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:46:43.091 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And comes the trouble.
+2026-06-14 13:46:43.092 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:46:43.366 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): When comes the trouble.
+2026-06-14 13:46:43.367 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44544
+2026-06-14 13:46:43.639 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And comes the troubled.
+2026-06-14 13:46:43.641 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 48640
+2026-06-14 13:46:44.001 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): When comes the trouble to Christ.
+2026-06-14 13:46:44.002 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 54784
+2026-06-14 13:46:44.352 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): When comes the trouble to rest.
+2026-06-14 13:46:44.353 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 59904
+2026-06-14 13:46:44.694 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): On comes the trouble to rest.
+2026-06-14 13:46:44.997 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:44.998 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 70656
+2026-06-14 13:46:44.999 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:45.081 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:45.083 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:45.085 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:45.189 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:45.298 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:45.407 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:45.502 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:46:45.544 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.46 seconds
+2026-06-14 13:46:45.545 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:45.545 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:46:45.546 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:49.036 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:49.037 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:49.037 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:49.037 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:49.231 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 19968
+2026-06-14 13:46:49.396 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Key.
+2026-06-14 13:46:49.432 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:46:49.597 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Key.
+2026-06-14 13:46:49.632 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:49.805 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:49.833 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:50.034 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His man.
+2026-06-14 13:46:50.035 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:46:50.245 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana.
+2026-06-14 13:46:50.245 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:46:50.520 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:50.520 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:46:50.763 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:46:50.764 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44544
+2026-06-14 13:46:51.064 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana to the wrong.
+2026-06-14 13:46:51.065 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 48640
+2026-06-14 13:46:51.388 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His manner to
+2026-06-14 13:46:51.389 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 53760
+2026-06-14 13:46:51.737 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His manner to
+2026-06-14 13:46:51.738 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 59904
+2026-06-14 13:46:52.117 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana to the
+2026-06-14 13:46:52.117 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 66048
+2026-06-14 13:46:52.522 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana to the hungry.
+2026-06-14 13:46:52.524 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 72192
+2026-06-14 13:46:52.994 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana to the hungry soul.
+2026-06-14 13:46:52.995 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 79360
+2026-06-14 13:46:53.469 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His mana to the hungry soul.
+2026-06-14 13:46:53.470 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 87552
+2026-06-14 13:46:54.021 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): His manna to the hungry soul.
+2026-06-14 13:46:54.278 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:46:54.280 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 100352
+2026-06-14 13:46:54.280 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:46:54.329 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:46:54.331 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:46:54.331 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.434 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.545 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.654 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.763 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.878 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:54.984 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:46:55.011 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:46:55.064 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.73 seconds
+2026-06-14 13:46:55.065 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:46:55.065 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:46:55.066 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:46:58.243 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:46:58.243 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:46:58.243 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:46:58.244 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:46:58.429 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:46:58.552 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:46:58.630 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 22016
+2026-06-14 13:46:58.785 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two.
+2026-06-14 13:46:58.830 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:46:58.995 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two.
+2026-06-14 13:46:59.032 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:46:59.227 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the other.
+2026-06-14 13:46:59.233 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:46:59.484 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And then we've got to
+2026-06-14 13:46:59.484 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:46:59.728 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the way it's
+2026-06-14 13:46:59.730 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:46:59.985 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary.
+2026-06-14 13:46:59.986 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44544
+2026-06-14 13:47:00.358 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary.
+2026-06-14 13:47:00.361 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 50688
+2026-06-14 13:47:00.720 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary ray.
+2026-06-14 13:47:00.722 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 55808
+2026-06-14 13:47:01.065 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary race.
+2026-06-14 13:47:01.066 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 61952
+2026-06-14 13:47:01.457 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And do the weary rest.
+2026-06-14 13:47:01.892 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:01.894 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 74752
+2026-06-14 13:47:01.894 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:01.899 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:01.901 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:01.902 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:02.011 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:02.119 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:02.228 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:02.333 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:02.364 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.46 seconds
+2026-06-14 13:47:02.365 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:02.365 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:02.367 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:04.262 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:04.262 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:04.262 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:04.262 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:04.456 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 19968
+2026-06-14 13:47:04.579 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:47:04.657 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:47:04.824 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two.
+2026-06-14 13:47:04.858 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:05.050 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two
+2026-06-14 13:47:05.059 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:47:05.263 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two.
+2026-06-14 13:47:05.264 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:47:05.482 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the
+2026-06-14 13:47:05.482 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:47:05.706 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And two.
+2026-06-14 13:47:05.707 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 39424
+2026-06-14 13:47:05.967 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the wheel.
+2026-06-14 13:47:05.969 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 43520
+2026-06-14 13:47:06.247 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary.
+2026-06-14 13:47:06.247 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 48640
+2026-06-14 13:47:06.545 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary.
+2026-06-14 13:47:06.546 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 52736
+2026-06-14 13:47:06.867 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary.
+2026-06-14 13:47:06.870 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 57856
+2026-06-14 13:47:07.258 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And to the weary raise.
+2026-06-14 13:47:07.783 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:07.785 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 72704
+2026-06-14 13:47:07.785 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:07.817 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:07.819 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:07.821 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:07.934 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:08.044 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:08.156 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:08.246 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:08.281 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.46 seconds
+2026-06-14 13:47:08.282 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:08.282 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:08.284 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:16.162 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:16.162 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:16.162 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:16.162 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:16.348 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:47:16.467 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:16.549 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 22016
+2026-06-14 13:47:16.710 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:16.749 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:16.920 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): The Rookie.
+2026-06-14 13:47:16.950 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:47:17.143 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): De Woke
+2026-06-14 13:47:17.150 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:47:17.382 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): De Book
+2026-06-14 13:47:17.383 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 35328
+2026-06-14 13:47:17.638 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): The Wok
+2026-06-14 13:47:17.640 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:47:17.886 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear Book.
+2026-06-14 13:47:17.887 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 43520
+2026-06-14 13:47:18.154 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear Book Hilo
+2026-06-14 13:47:18.155 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 47616
+2026-06-14 13:47:18.469 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear book high load
+2026-06-14 13:47:18.470 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 52736
+2026-06-14 13:47:18.819 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear Wok, Lilo und
+2026-06-14 13:47:18.820 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 58880
+2026-06-14 13:47:19.184 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): De Work on
+2026-06-14 13:47:19.186 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 65024
+2026-06-14 13:47:19.587 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): The walk my word on weather.
+2026-06-14 13:47:19.591 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 71168
+2026-06-14 13:47:19.995 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear wrote my Lord on We choice.
+2026-06-14 13:47:19.996 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 77312
+2026-06-14 13:47:20.429 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Dear wrote my Lord on which I stand
+2026-06-14 13:47:20.431 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 84480
+2026-06-14 13:47:20.929 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): The walk my Lord on which I stand
+2026-06-14 13:47:21.281 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:21.283 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 98304
+2026-06-14 13:47:21.283 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:21.386 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:21.388 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:21.389 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.490 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.599 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.708 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.818 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.923 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:21.923 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:21.923 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'recording'
+2026-06-14 13:47:21.928 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:21.979 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.59 seconds
+2026-06-14 13:47:21.980 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:21.980 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:22.105 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 13312
+2026-06-14 13:47:22.215 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Why?
+2026-06-14 13:47:22.307 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 16384
+2026-06-14 13:47:22.411 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My
+2026-06-14 13:47:22.509 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 20480
+2026-06-14 13:47:22.645 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My
+2026-06-14 13:47:22.710 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23552
+2026-06-14 13:47:22.863 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Live
+2026-06-14 13:47:22.911 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26624
+2026-06-14 13:47:23.113 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My uh
+2026-06-14 13:47:23.114 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29696
+2026-06-14 13:47:23.300 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first
+2026-06-14 13:47:23.314 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32768
+2026-06-14 13:47:23.534 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first friend.
+2026-06-14 13:47:23.534 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36864
+2026-06-14 13:47:23.767 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first thing
+2026-06-14 13:47:23.768 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 39936
+2026-06-14 13:47:24.021 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength.
+2026-06-14 13:47:24.021 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44032
+2026-06-14 13:47:24.339 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength and
+2026-06-14 13:47:24.340 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 49152
+2026-06-14 13:47:24.673 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength and idea.
+2026-06-14 13:47:24.675 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 54272
+2026-06-14 13:47:25.010 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength and hiding
+2026-06-14 13:47:25.011 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 60416
+2026-06-14 13:47:25.419 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength and hiding place.
+2026-06-14 13:47:25.420 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 66560
+2026-06-14 13:47:25.823 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): My first strength and hiding this
+2026-06-14 13:47:26.213 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:26.214 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 79360
+2026-06-14 13:47:26.214 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:26.246 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:26.249 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:26.250 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:26.353 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:26.461 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:26.569 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:26.678 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:26.757 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:26.809 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.56 seconds
+2026-06-14 13:47:26.810 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:26.810 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:26.811 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:31.397 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:31.397 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:31.397 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:31.398 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:31.582 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:47:31.702 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Wow.
+2026-06-14 13:47:31.783 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 22016
+2026-06-14 13:47:31.939 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Wow.
+2026-06-14 13:47:31.983 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:32.159 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh
+2026-06-14 13:47:32.183 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:47:32.385 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh uh for
+2026-06-14 13:47:32.386 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:47:32.590 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I forgot.
+2026-06-14 13:47:32.591 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 35328
+2026-06-14 13:47:32.841 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten.
+2026-06-14 13:47:32.842 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 39424
+2026-06-14 13:47:33.080 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten.
+2026-06-14 13:47:33.080 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 43520
+2026-06-14 13:47:33.376 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the
+2026-06-14 13:47:33.377 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 47616
+2026-06-14 13:47:33.667 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other.
+2026-06-14 13:47:33.667 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 52736
+2026-06-14 13:47:34.012 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other.
+2026-06-14 13:47:34.013 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 57856
+2026-06-14 13:47:34.413 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other.
+2026-06-14 13:47:34.414 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 65024
+2026-06-14 13:47:34.809 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other Luke.
+2026-06-14 13:47:34.810 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 71168
+2026-06-14 13:47:35.233 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other Luke.
+2026-06-14 13:47:35.237 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 78336
+2026-06-14 13:47:35.807 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Uh I've forgotten the other Luke.
+2026-06-14 13:47:36.399 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:36.401 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 96256
+2026-06-14 13:47:36.401 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:36.454 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:36.456 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:36.469 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:36.573 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:36.682 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:36.792 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:36.901 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:37.009 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:37.053 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:37.072 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.62 seconds
+2026-06-14 13:47:37.072 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:37.072 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:37.074 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:38.117 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:38.117 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:38.117 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:38.117 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:38.317 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:47:38.437 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:38.518 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:47:38.674 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary.
+2026-06-14 13:47:38.718 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:38.941 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary.
+2026-06-14 13:47:38.943 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:47:39.151 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary
+2026-06-14 13:47:39.152 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 33280
+2026-06-14 13:47:39.371 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary
+2026-06-14 13:47:39.465 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 38400
+2026-06-14 13:47:39.733 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary
+2026-06-14 13:47:39.734 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 42496
+2026-06-14 13:47:40.067 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Marriage I think
+2026-06-14 13:47:40.072 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 47616
+2026-06-14 13:47:40.464 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary I think
+2026-06-14 13:47:40.465 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 53760
+2026-06-14 13:47:40.847 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary Cov
+2026-06-14 13:47:40.849 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 59904
+2026-06-14 13:47:41.295 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary at the Calvary.
+2026-06-14 13:47:41.296 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 67072
+2026-06-14 13:47:41.776 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary at the Calvary
+2026-06-14 13:47:41.777 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 75264
+2026-06-14 13:47:42.296 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Marriage at the Calvary of
+2026-06-14 13:47:42.297 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 83456
+2026-06-14 13:47:42.936 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Marriage at the cavalry of
+2026-06-14 13:47:42.937 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 93696
+2026-06-14 13:47:43.616 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mary at the Calvary of Mariah
+2026-06-14 13:47:43.757 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:43.759 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 106496
+2026-06-14 13:47:43.760 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:43.805 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:43.807 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:43.815 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:43.920 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:43.944 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:43.944 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:43.945 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'recording'
+2026-06-14 13:47:44.029 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.125 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 6144
+2026-06-14 13:47:44.139 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.236 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Um
+2026-06-14 13:47:44.267 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.325 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 10240
+2026-06-14 13:47:44.373 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.461 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:47:44.491 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.526 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 13312
+2026-06-14 13:47:44.593 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.704 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:44.709 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:47:44.754 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 16384
+2026-06-14 13:47:44.766 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.96 seconds
+2026-06-14 13:47:44.767 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:44.767 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:44.984 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And
+2026-06-14 13:47:44.985 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 20480
+2026-06-14 13:47:45.208 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And error.
+2026-06-14 13:47:45.208 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23552
+2026-06-14 13:47:45.435 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Eron
+2026-06-14 13:47:45.437 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 27648
+2026-06-14 13:47:45.680 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Erron and
+2026-06-14 13:47:45.681 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 31744
+2026-06-14 13:47:45.957 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Eron and
+2026-06-14 13:47:45.959 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 35840
+2026-06-14 13:47:46.274 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Eron and G
+2026-06-14 13:47:46.275 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40960
+2026-06-14 13:47:46.588 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Eron and Gilda.
+2026-06-14 13:47:46.590 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 46080
+2026-06-14 13:47:46.934 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): and Eron and Gildad.
+2026-06-14 13:47:46.935 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 51200
+2026-06-14 13:47:47.336 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): And Eron and Gildad.
+2026-06-14 13:47:47.716 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:47.717 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 64000
+2026-06-14 13:47:47.718 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:47.815 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:47.817 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:47.820 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:47.926 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:48.035 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:48.145 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:48.199 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:48.229 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.41 seconds
+2026-06-14 13:47:48.229 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:48.230 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:48.232 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:51.756 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:51.756 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:51.756 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:51.756 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:51.948 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 19968
+2026-06-14 13:47:52.067 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:52.149 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:47:52.291 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam.
+2026-06-14 13:47:52.349 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:52.513 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:52.550 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:47:52.772 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:52.772 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:47:52.993 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:52.993 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:47:53.238 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:53.241 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 40448
+2026-06-14 13:47:53.543 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron.
+2026-06-14 13:47:53.543 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 44544
+2026-06-14 13:47:53.901 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron.
+2026-06-14 13:47:53.902 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 50688
+2026-06-14 13:47:54.232 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron at the time.
+2026-06-14 13:47:54.237 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 55808
+2026-06-14 13:47:54.647 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron at the moment.
+2026-06-14 13:47:54.650 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 62976
+2026-06-14 13:47:55.236 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron at the Mount of
+2026-06-14 13:47:55.237 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 72192
+2026-06-14 13:47:55.794 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Miriam and Aaron at the Mount of Olives.
+2026-06-14 13:47:56.236 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:47:56.238 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 88064
+2026-06-14 13:47:56.238 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:47:56.266 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:47:56.267 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:47:56.269 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.381 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.491 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.597 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.703 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.810 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:47:56.834 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:47:56.885 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.62 seconds
+2026-06-14 13:47:56.886 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:47:56.886 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:47:56.888 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:47:59.116 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:47:59.116 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:47:59.116 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:47:59.116 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:47:59.313 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 19968
+2026-06-14 13:47:59.479 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): F
+2026-06-14 13:47:59.515 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:47:59.663 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:59.715 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:47:59.877 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:47:59.916 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:48:00.131 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Mm.
+2026-06-14 13:48:00.132 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:48:00.388 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:48:00.389 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 36352
+2026-06-14 13:48:00.672 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of Host.
+2026-06-14 13:48:00.673 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 41472
+2026-06-14 13:48:00.938 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of Hosts
+2026-06-14 13:48:00.939 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 45568
+2026-06-14 13:48:01.288 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of Hosts.
+2026-06-14 13:48:01.289 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 51712
+2026-06-14 13:48:01.738 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of Hosts is
+2026-06-14 13:48:01.743 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 58880
+2026-06-14 13:48:02.185 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of hosts is among the
+2026-06-14 13:48:02.186 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 66048
+2026-06-14 13:48:02.646 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): For the Lord of hosts is among you.
+2026-06-14 13:48:03.203 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:48:03.204 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 81920
+2026-06-14 13:48:03.204 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:48:03.297 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:48:03.301 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:48:03.302 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:03.414 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:03.514 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:03.623 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:03.734 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:03.818 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:48:03.833 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.53 seconds
+2026-06-14 13:48:03.833 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:48:03.834 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:48:03.836 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:48:09.223 - RealTimeSTT: realtimestt - INFO - voice activity detected
+2026-06-14 13:48:09.223 - RealTimeSTT: realtimestt - INFO - recording started
+2026-06-14 13:48:09.223 - RealTimeSTT: realtimestt - INFO - State changed from 'listening' to 'recording'
+2026-06-14 13:48:09.223 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording stop
+2026-06-14 13:48:09.404 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 18944
+2026-06-14 13:48:09.586 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:48:09.605 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 23040
+2026-06-14 13:48:09.774 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription returned empty text
+2026-06-14 13:48:09.806 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 26112
+2026-06-14 13:48:09.962 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): A bisek
+2026-06-14 13:48:10.006 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 29184
+2026-06-14 13:48:10.206 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): A bisek
+2026-06-14 13:48:10.208 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 32256
+2026-06-14 13:48:10.404 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abishek an.
+2026-06-14 13:48:10.409 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 35328
+2026-06-14 13:48:10.652 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): A bisek anabi.
+2026-06-14 13:48:10.654 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 39424
+2026-06-14 13:48:10.919 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abi Shek and Abime.
+2026-06-14 13:48:10.919 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 43520
+2026-06-14 13:48:11.212 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abishek and Abimelech.
+2026-06-14 13:48:11.215 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 48640
+2026-06-14 13:48:11.501 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abishek and Abimelech.
+2026-06-14 13:48:11.502 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 52736
+2026-06-14 13:48:11.871 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abish and Abelec were in the first time.
+2026-06-14 13:48:11.872 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 58880
+2026-06-14 13:48:12.241 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abish and Abimelech will go on.
+2026-06-14 13:48:12.242 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 65024
+2026-06-14 13:48:12.593 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abhishek and Abimelech will go and fight.
+2026-06-14 13:48:12.594 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 70144
+2026-06-14 13:48:13.041 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abhishek and Abimelech will go on fighting.
+2026-06-14 13:48:13.042 - RealTimeSTT: realtimestt - DEBUG - Current realtime buffer size: 77312
+2026-06-14 13:48:13.560 - RealTimeSTT: realtimestt - DEBUG - Realtime text detected (timer): Abhishek and Abimelech will go and fight in Gildan.
+2026-06-14 13:48:14.156 - RealTimeSTT: realtimestt - INFO - recording stopped
+2026-06-14 13:48:14.159 - RealTimeSTT: realtimestt - DEBUG - No samples removed, final audio length: 95232
+2026-06-14 13:48:14.159 - RealTimeSTT: realtimestt - INFO - State changed from 'recording' to 'inactive'
+2026-06-14 13:48:14.233 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'transcribing'
+2026-06-14 13:48:14.235 - RealTimeSTT: realtimestt - DEBUG - Adding transcription request, no early transcription started
+2026-06-14 13:48:14.251 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:14.355 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:14.465 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:14.574 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:14.685 - RealTimeSTT: realtimestt - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2026-06-14 13:48:14.792 - RealTimeSTT: realtimestt - INFO - State changed from 'transcribing' to 'inactive'
+2026-06-14 13:48:14.799 - RealTimeSTT: realtimestt - DEBUG - Model test-model-cache/sherpa-onnx/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8 completed transcription in 0.56 seconds
+2026-06-14 13:48:14.800 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 13:48:14.800 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 13:48:14.802 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 13:48:31.634 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 13:48:31.634 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 13:48:31.636 - RealTimeSTT: realtimestt - DEBUG - Realtime worker stopped
+2026-06-14 13:48:31.650 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 13:48:31.921 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
