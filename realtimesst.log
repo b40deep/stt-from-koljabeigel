@@ -1322,3 +1322,413 @@ RealtimeSTT.transcription_engines.base.TranscriptionEngineError: Missing sherpa-
 2026-06-14 13:48:31.636 - RealTimeSTT: realtimestt - DEBUG - Realtime worker stopped
 2026-06-14 13:48:31.650 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
 2026-06-14 13:48:31.921 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
+2026-06-14 19:16:32.854 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:16:32.862 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:16:32.863 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:16:33.020 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:16:33.025 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:16:33.025 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:16:33.025 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:16:38.252 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:16:38.255 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:17:11.287 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:17:11.294 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:17:11.294 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:17:11.370 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:17:11.372 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:17:11.372 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:17:11.373 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:17:16.127 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:17:16.127 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:18:39.101 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 19:18:39.103 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 19:18:44.593 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:18:44.601 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:18:44.601 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:18:44.677 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:18:44.679 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:18:44.679 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:18:44.679 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:18:49.537 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:18:49.538 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:19:47.530 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 19:19:47.531 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 19:19:50.819 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:19:50.826 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:19:50.826 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:19:50.897 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:19:50.899 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:19:50.900 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:19:50.900 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:19:55.561 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:19:55.561 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:20:13.417 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:20:13.423 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:20:13.423 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:20:13.497 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:20:13.499 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:20:13.499 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:20:13.499 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:20:18.305 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:20:18.311 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:20:18.313 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 19:20:18.313 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 19:20:18.313 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 179. Discarding old audio chunks.
+2026-06-14 19:20:18.325 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 19:21:27.989 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 19:21:27.989 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 19:21:27.990 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 19:21:27.990 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 19:21:28.005 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 19:21:28.005 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 19:21:28.246 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
+2026-06-14 19:21:52.053 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:21:52.061 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:21:52.062 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:21:52.141 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:21:52.143 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:21:52.143 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:21:52.144 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:21:57.071 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:21:57.072 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:21:57.073 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 19:21:57.073 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 19:21:57.074 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 179. Discarding old audio chunks.
+2026-06-14 19:21:57.077 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 19:22:18.961 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 19:22:18.963 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 19:22:18.977 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 19:22:18.978 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 19:22:19.431 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 19:22:19.491 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
+2026-06-14 19:24:58.449 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:24:58.455 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:24:58.455 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:24:58.537 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:24:58.539 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:24:58.539 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:24:58.539 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:25:03.340 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:25:03.340 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:25:24.578 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:25:24.584 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:25:24.584 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:25:24.662 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:25:24.663 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:25:24.663 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 19:25:24.664 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:25:29.488 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 19:25:29.489 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 19:25:29.490 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 19:25:29.490 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 19:25:29.490 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 179. Discarding old audio chunks.
+2026-06-14 19:25:29.496 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 19:25:52.030 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 19:25:52.032 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 19:25:52.045 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 19:25:52.046 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 19:25:52.542 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 19:25:52.594 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
+2026-06-14 19:26:07.612 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 19:26:07.618 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 19:26:07.618 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 19:26:07.692 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 19:26:07.694 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 19:26:07.694 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 19:26:07.694 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:00:06.315 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:00:06.324 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:00:06.325 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:00:06.539 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:00:06.552 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:00:06.552 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:00:06.552 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:02:23.201 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:02:23.207 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:02:23.207 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:02:23.283 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:02:23.285 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:02:23.285 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:02:23.285 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:02:28.037 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:02:28.037 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:03:05.367 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:03:05.374 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:03:05.374 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:03:05.454 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:03:05.456 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:03:05.456 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:03:05.456 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:03:10.331 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:03:10.332 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:03:33.083 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 21:03:33.083 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 21:03:37.554 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:03:37.562 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:03:37.562 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:03:37.635 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:03:37.637 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:03:37.637 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:03:37.637 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:03:42.359 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:03:42.360 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:04:23.885 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:04:23.892 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:04:23.892 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:04:23.962 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:04:23.964 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:04:23.965 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:04:23.965 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:04:28.574 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:04:28.575 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:05:36.490 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:05:36.499 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:05:36.499 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:05:36.576 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:05:36.578 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:05:36.578 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:05:36.578 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:05:41.953 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:05:41.953 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:05:54.912 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 21:05:54.913 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 21:06:00.734 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:06:00.740 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:06:00.740 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:06:00.819 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:06:00.821 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:06:00.822 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:06:00.822 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:06:05.621 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:06:05.621 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:06:05.630 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3040. Discarding old audio chunks.
+2026-06-14 21:06:06.126 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12347. Discarding old audio chunks.
+2026-06-14 21:06:06.460 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:06.547 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 32744. Discarding old audio chunks.
+2026-06-14 21:06:07.600 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:07.706 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 22134. Discarding old audio chunks.
+2026-06-14 21:06:08.285 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 243. Discarding old audio chunks.
+2026-06-14 21:06:08.665 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:09.571 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:09.727 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 37686. Discarding old audio chunks.
+2026-06-14 21:06:11.195 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 103. Discarding old audio chunks.
+2026-06-14 21:06:11.677 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11036. Discarding old audio chunks.
+2026-06-14 21:06:12.651 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 114. Discarding old audio chunks.
+2026-06-14 21:06:13.006 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:13.076 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 24261. Discarding old audio chunks.
+2026-06-14 21:06:13.537 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:13.802 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:13.949 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6260. Discarding old audio chunks.
+2026-06-14 21:06:14.706 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:14.836 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10819. Discarding old audio chunks.
+2026-06-14 21:06:15.375 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 13537. Discarding old audio chunks.
+2026-06-14 21:06:15.538 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:16.284 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:17.408 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 144. Discarding old audio chunks.
+2026-06-14 21:06:17.608 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 106. Discarding old audio chunks.
+2026-06-14 21:06:18.152 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:18.512 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 8644. Discarding old audio chunks.
+2026-06-14 21:06:18.823 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 16032. Discarding old audio chunks.
+2026-06-14 21:06:19.136 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:19.331 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:19.383 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12801. Discarding old audio chunks.
+2026-06-14 21:06:19.798 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 105. Discarding old audio chunks.
+2026-06-14 21:06:20.007 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 37683. Discarding old audio chunks.
+2026-06-14 21:06:20.884 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:21.039 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:21.125 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 15805. Discarding old audio chunks.
+2026-06-14 21:06:21.670 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12570. Discarding old audio chunks.
+2026-06-14 21:06:22.194 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:22.301 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:22.781 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12078. Discarding old audio chunks.
+2026-06-14 21:06:23.299 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:23.603 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:23.972 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 9620. Discarding old audio chunks.
+2026-06-14 21:06:24.729 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:26.052 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:26.170 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:26.637 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 103. Discarding old audio chunks.
+2026-06-14 21:06:27.335 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:06:38.250 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:06:38.257 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:06:38.257 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:06:38.335 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:06:38.338 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:06:38.338 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:06:38.338 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:06:43.141 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:06:43.144 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:06:43.159 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2397. Discarding old audio chunks.
+2026-06-14 21:06:43.207 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1717. Discarding old audio chunks.
+2026-06-14 21:06:43.268 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6385. Discarding old audio chunks.
+2026-06-14 21:06:43.423 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:43.503 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5316. Discarding old audio chunks.
+2026-06-14 21:06:43.565 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3564. Discarding old audio chunks.
+2026-06-14 21:06:43.687 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:43.766 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6041. Discarding old audio chunks.
+2026-06-14 21:06:43.890 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5730. Discarding old audio chunks.
+2026-06-14 21:06:44.221 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:44.305 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11408. Discarding old audio chunks.
+2026-06-14 21:06:44.585 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2629. Discarding old audio chunks.
+2026-06-14 21:06:44.726 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5882. Discarding old audio chunks.
+2026-06-14 21:06:44.835 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6018. Discarding old audio chunks.
+2026-06-14 21:06:44.913 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3910. Discarding old audio chunks.
+2026-06-14 21:06:44.975 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6217. Discarding old audio chunks.
+2026-06-14 21:06:45.039 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5992. Discarding old audio chunks.
+2026-06-14 21:06:45.423 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:45.503 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4793. Discarding old audio chunks.
+2026-06-14 21:06:45.596 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3205. Discarding old audio chunks.
+2026-06-14 21:06:45.737 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6099. Discarding old audio chunks.
+2026-06-14 21:06:45.815 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:45.909 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5400. Discarding old audio chunks.
+2026-06-14 21:06:46.023 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:46.095 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6187. Discarding old audio chunks.
+2026-06-14 21:06:46.157 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4809. Discarding old audio chunks.
+2026-06-14 21:06:46.218 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5847. Discarding old audio chunks.
+2026-06-14 21:06:46.281 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5119. Discarding old audio chunks.
+2026-06-14 21:06:46.545 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 108. Discarding old audio chunks.
+2026-06-14 21:06:46.592 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1612. Discarding old audio chunks.
+2026-06-14 21:06:46.685 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10419. Discarding old audio chunks.
+2026-06-14 21:06:46.914 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4317. Discarding old audio chunks.
+2026-06-14 21:06:46.978 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:47.038 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6858. Discarding old audio chunks.
+2026-06-14 21:06:47.100 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4849. Discarding old audio chunks.
+2026-06-14 21:06:47.392 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:47.469 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6022. Discarding old audio chunks.
+2026-06-14 21:06:47.692 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:47.779 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5778. Discarding old audio chunks.
+2026-06-14 21:06:47.842 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5905. Discarding old audio chunks.
+2026-06-14 21:06:47.903 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5502. Discarding old audio chunks.
+2026-06-14 21:06:47.965 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5194. Discarding old audio chunks.
+2026-06-14 21:06:48.074 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1920. Discarding old audio chunks.
+2026-06-14 21:06:48.150 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4938. Discarding old audio chunks.
+2026-06-14 21:06:48.213 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6446. Discarding old audio chunks.
+2026-06-14 21:06:48.306 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2717. Discarding old audio chunks.
+2026-06-14 21:06:48.577 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 116. Discarding old audio chunks.
+2026-06-14 21:06:48.653 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12062. Discarding old audio chunks.
+2026-06-14 21:06:48.734 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:48.779 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2210. Discarding old audio chunks.
+2026-06-14 21:06:48.905 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:48.963 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1480. Discarding old audio chunks.
+2026-06-14 21:06:49.055 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 9866. Discarding old audio chunks.
+2026-06-14 21:06:49.270 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 103. Discarding old audio chunks.
+2026-06-14 21:06:49.348 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6095. Discarding old audio chunks.
+2026-06-14 21:06:49.515 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:49.564 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1873. Discarding old audio chunks.
+2026-06-14 21:06:49.611 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1179. Discarding old audio chunks.
+2026-06-14 21:06:49.672 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6404. Discarding old audio chunks.
+2026-06-14 21:06:49.858 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:49.935 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6649. Discarding old audio chunks.
+2026-06-14 21:06:49.981 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6759. Discarding old audio chunks.
+2026-06-14 21:06:50.076 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:50.119 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1731. Discarding old audio chunks.
+2026-06-14 21:06:50.227 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2328. Discarding old audio chunks.
+2026-06-14 21:06:50.242 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3872. Discarding old audio chunks.
+2026-06-14 21:06:50.304 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5309. Discarding old audio chunks.
+2026-06-14 21:06:50.580 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5056. Discarding old audio chunks.
+2026-06-14 21:06:50.641 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6044. Discarding old audio chunks.
+2026-06-14 21:06:50.719 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4080. Discarding old audio chunks.
+2026-06-14 21:06:50.781 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6122. Discarding old audio chunks.
+2026-06-14 21:06:50.827 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6062. Discarding old audio chunks.
+2026-06-14 21:06:51.074 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5484. Discarding old audio chunks.
+2026-06-14 21:06:51.136 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4853. Discarding old audio chunks.
+2026-06-14 21:06:51.396 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1694. Discarding old audio chunks.
+2026-06-14 21:06:51.488 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10725. Discarding old audio chunks.
+2026-06-14 21:06:51.829 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2819. Discarding old audio chunks.
+2026-06-14 21:06:52.136 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2964. Discarding old audio chunks.
+2026-06-14 21:06:52.198 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6475. Discarding old audio chunks.
+2026-06-14 21:06:52.291 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2530. Discarding old audio chunks.
+2026-06-14 21:06:52.369 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2357. Discarding old audio chunks.
+2026-06-14 21:06:52.447 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5769. Discarding old audio chunks.
+2026-06-14 21:06:52.588 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6033. Discarding old audio chunks.
+2026-06-14 21:06:52.649 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5553. Discarding old audio chunks.
+2026-06-14 21:06:52.901 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:52.943 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2231. Discarding old audio chunks.
+2026-06-14 21:06:53.021 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5064. Discarding old audio chunks.
+2026-06-14 21:06:53.084 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5442. Discarding old audio chunks.
+2026-06-14 21:06:53.145 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5395. Discarding old audio chunks.
+2026-06-14 21:06:53.176 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1963. Discarding old audio chunks.
+2026-06-14 21:06:53.239 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6371. Discarding old audio chunks.
+2026-06-14 21:06:53.440 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 17634. Discarding old audio chunks.
+2026-06-14 21:06:53.547 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4012. Discarding old audio chunks.
+2026-06-14 21:06:53.608 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6221. Discarding old audio chunks.
+2026-06-14 21:06:53.716 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1283. Discarding old audio chunks.
+2026-06-14 21:06:53.778 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6941. Discarding old audio chunks.
+2026-06-14 21:06:54.074 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:54.117 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1745. Discarding old audio chunks.
+2026-06-14 21:06:54.258 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:54.334 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5961. Discarding old audio chunks.
+2026-06-14 21:06:54.531 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:54.612 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5269. Discarding old audio chunks.
+2026-06-14 21:06:54.673 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5625. Discarding old audio chunks.
+2026-06-14 21:06:54.813 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11542. Discarding old audio chunks.
+2026-06-14 21:06:54.952 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1819. Discarding old audio chunks.
+2026-06-14 21:06:55.030 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11319. Discarding old audio chunks.
+2026-06-14 21:06:55.111 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:06:55.200 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11160. Discarding old audio chunks.
+2026-06-14 21:06:55.277 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2502. Discarding old audio chunks.
+2026-06-14 21:06:55.355 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10634. Discarding old audio chunks.
+2026-06-14 21:06:55.432 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3096. Discarding old audio chunks.
+2026-06-14 21:06:55.509 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3014. Discarding old audio chunks.
+2026-06-14 21:06:55.643 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:55.761 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 20664. Discarding old audio chunks.
+2026-06-14 21:06:56.181 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:56.256 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6065. Discarding old audio chunks.
+2026-06-14 21:06:56.334 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10198. Discarding old audio chunks.
+2026-06-14 21:06:56.401 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:06:56.442 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2338. Discarding old audio chunks.
+2026-06-14 21:06:56.519 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5230. Discarding old audio chunks.
+2026-06-14 21:06:56.627 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 8078. Discarding old audio chunks.
+2026-06-14 21:06:56.751 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6069. Discarding old audio chunks.
+2026-06-14 21:06:56.859 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3290. Discarding old audio chunks.
+2026-06-14 21:06:56.953 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3402. Discarding old audio chunks.
+2026-06-14 21:06:57.029 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 10911. Discarding old audio chunks.
+2026-06-14 21:10:39.989 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:10:39.997 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:10:39.998 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:10:40.156 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:10:40.161 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:10:40.161 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:10:40.161 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:10:44.811 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:10:44.811 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:10:44.831 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 3254. Discarding old audio chunks.
+2026-06-14 21:10:44.895 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 1162. Discarding old audio chunks.
+2026-06-14 21:10:44.972 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6842. Discarding old audio chunks.
+2026-06-14 21:10:45.131 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 101. Discarding old audio chunks.
+2026-06-14 21:10:45.205 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6331. Discarding old audio chunks.
+2026-06-14 21:10:45.504 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6259. Discarding old audio chunks.
+2026-06-14 21:10:45.859 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 104. Discarding old audio chunks.
+2026-06-14 21:10:45.936 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5806. Discarding old audio chunks.
+2026-06-14 21:10:46.046 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 11722. Discarding old audio chunks.
+2026-06-14 21:10:46.108 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4185. Discarding old audio chunks.
+2026-06-14 21:10:46.201 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2078. Discarding old audio chunks.
+2026-06-14 21:10:46.263 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 5965. Discarding old audio chunks.
+2026-06-14 21:10:46.325 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6295. Discarding old audio chunks.
+2026-06-14 21:10:46.404 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 4549. Discarding old audio chunks.
+2026-06-14 21:10:46.699 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2555. Discarding old audio chunks.
+2026-06-14 21:10:46.838 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 6424. Discarding old audio chunks.
+2026-06-14 21:10:46.931 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 2288. Discarding old audio chunks.
+2026-06-14 21:10:46.996 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:10:47.205 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 102. Discarding old audio chunks.
+2026-06-14 21:10:47.290 - RealTimeSTT: realtimestt - WARNING - Audio queue size exceeds latency limit. Current size: 12610. Discarding old audio chunks.
+2026-06-14 21:18:03.455 - RealTimeSTT: realtimestt - INFO - Starting RealTimeSTT
+2026-06-14 21:18:03.463 - RealTimeSTT: realtimestt - INFO - Initializing WebRTC voice with Sensitivity 3
+2026-06-14 21:18:03.463 - RealTimeSTT: realtimestt - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2026-06-14 21:18:03.556 - RealTimeSTT: realtimestt - DEBUG - Silero VAD voice activity detection engine initialized successfully with backend raw_onnx_ifless
+2026-06-14 21:18:03.558 - RealTimeSTT: realtimestt - DEBUG - Starting realtime worker
+2026-06-14 21:18:03.558 - RealTimeSTT: realtimestt - DEBUG - Realtime transcription disabled; realtime worker exits
+2026-06-14 21:18:03.558 - RealTimeSTT: realtimestt - DEBUG - Waiting for main transcription model to start
+2026-06-14 21:18:08.499 - RealTimeSTT: realtimestt - DEBUG - Main transcription model ready
+2026-06-14 21:18:08.500 - RealTimeSTT: realtimestt - DEBUG - RealtimeSTT initialization completed successfully
+2026-06-14 21:18:08.506 - RealTimeSTT: realtimestt - INFO - Setting listen time
+2026-06-14 21:18:08.506 - RealTimeSTT: realtimestt - INFO - State changed from 'inactive' to 'listening'
+2026-06-14 21:18:08.513 - RealTimeSTT: realtimestt - DEBUG - Waiting for recording start
+2026-06-14 21:18:57.875 - RealTimeSTT: realtimestt - DEBUG - Receive from stdout pipe
+2026-06-14 21:18:57.876 - RealTimeSTT: realtimestt - INFO - None
+2026-06-14 21:18:57.891 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in wait_audio, shutting down
+2026-06-14 21:18:57.891 - RealTimeSTT: realtimestt - DEBUG - Finishing recording thread
+2026-06-14 21:18:57.907 - RealTimeSTT: realtimestt - DEBUG - Terminating reader process
+2026-06-14 21:18:57.907 - RealTimeSTT: realtimestt - DEBUG - Terminating transcription process
+2026-06-14 21:18:58.285 - RealTimeSTT: realtimestt - DEBUG - Finishing realtime thread
+2026-06-14 21:18:58.331 - RealTimeSTT: realtimestt - INFO - KeyboardInterrupt in text() method
